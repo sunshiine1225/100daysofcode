@@ -1,0 +1,31 @@
+problem: https://codeforces.com/problemset/problem/1697/B
+
+solution:
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+  {
+      int c,q;
+      cin >> c>>q;
+      long long int a[c];
+      cin >>a[0];
+      for(int i=1;i<c;i++){
+          
+          
+          cin >>a[i];
+           
+      }
+ 
+      sort(a,a+c);
+      for(int i=1;i<c;i++){
+         a[i]=a[i]+a[i-1];}
+      int x,y;
+     while(q--){
+         cin >>x >>y;
+        if(c==x)
+        cout <<a[c-x-1+y]<<endl;
+        else
+        cout << a[c-x-1+y] -a[c-x-1] <<endl;
+ 
+  }
+     }
